@@ -32,3 +32,17 @@ evalN (toss :+: Lit 2 :*: (toss :+: Lit 2 :*: (toss :+: Lit 2 :*: toss)))
 evalR (Var "a" :+: Lit 1) [("a", 4711), ("b", 0815)]
 evalR (Var "a" :*: Var "b") [("a", 4711), ("b", 0815)]
 evalR (Var "a" :*: Var "c") [("a", 4711), ("b", 0815)]
+
+--------------------------------------------------------------------------------
+author: Hendrik Werner s4549775
+author: Anna Töskés s1005628
+
+exercise 1
+==========
+
+exercise 2.1
+============
+
+exercise 2.2
+============
+(optional)

@@ -20,3 +20,13 @@ lists bools 1
 lists bools 2
 trees (lists bools 2) 1
 trees (lists bools 2) 2
+
+--------------------------------------------------------------------------------
+author: Hendrik Werner s4549775
+author: Anna Töskés s1005628
+
+exercise 3.1
+============
+
+exercise 3.2
+============
