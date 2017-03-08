@@ -40,6 +40,13 @@ author: Anna Töskés s1005628
 exercise 1
 ==========
 
+> evalN :: Expr -> [Integer]
+> evalN (Lit i) = pure i
+> evalN (e1 :+: e2) = pure (+) <*> evalN e1 <*> evalN e2
+> evalN (e1 :*: e2) = pure (*) <*> evalN e1 <*> evalN e2
+> evalN (Div e1 e2) = pure div <*> evalN e1 <*> evalN e2
+> evalN (e1 :?: e2) = evalN e1 ++ evalN e2
+
 exercise 2.1
 ============
 
