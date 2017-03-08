@@ -50,6 +50,16 @@ exercise 1
 exercise 2.1
 ============
 
+> evalR :: Expr -> [(String, Integer)] -> Integer
+> evalR (Lit i) = pure i
+> evalR (e1 :+: e2) = pure (+) <*> evalR e1 <*> evalR e2
+> evalR (e1 :*: e2) = pure (*) <*> evalR e1 <*> evalR e2
+> evalR (Div e1 e2) = pure div <*> evalR e1 <*> evalR e2
+> evalR (Var v) = lookup' v
+>     where lookup' k kvs = case lookup k kvs of
+>               Nothing -> 0
+>               Just i -> i
+
 exercise 2.2
 ============
 (optional)
