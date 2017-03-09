@@ -18,6 +18,7 @@
 >     deriving(Show)
 
 > data Tree elem = Empty | Node (Tree elem) elem (Tree elem)
+>     deriving(Show)
 
 lists bools 1
 lists bools 2
