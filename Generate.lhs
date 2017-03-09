@@ -11,8 +11,11 @@
 > maybes elems  =  pure Nothing ++ (pure Just <*> elems)
 
 > data Suit  =  Spades | Hearts | Diamonds | Clubs
+>     deriving(Show)
 > data Rank  =  Faceless Integer | Jack | Queen | King
+>     deriving(Show)
 > data Card  =  Card Rank Suit | Joker
+>     deriving(Show)
 
 > data Tree elem = Empty | Node (Tree elem) elem (Tree elem)
 
