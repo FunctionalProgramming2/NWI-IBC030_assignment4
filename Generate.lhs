@@ -37,8 +37,14 @@ exercise 3.1
 > ranks :: [Integer] -> [Rank]
 > ranks is = [Faceless i | i <- is] ++ pure Jack ++ pure Queen ++ pure King
 
+ranks :: [Integer] -> [Rank]
+ranks is = (pure Faceless <*> is) ++ pure Jack ++ pure Queen ++ pure King
+
 > cards :: [Rank] -> [Suit] -> [Card]
 > cards rs ss = [Card r s | r <- rs, s <- ss] ++ pure Joker
+
+cards :: [Rank] -> [Suit] -> [Card]
+cards r s = (pure Card <*> r <*> s) ++ pure Joker
 
 exercise 3.2
 ============
