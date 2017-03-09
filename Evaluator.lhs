@@ -39,7 +39,7 @@ evalR (Var "a" :*: Var "c") [("a", 4711), ("b", 0815)]
 
 --------------------------------------------------------------------------------
 author: Hendrik Werner s4549775
-author: Anna Töskés s1005628
+author: Anna Tökés s1005628
 
 exercise 1
 ==========

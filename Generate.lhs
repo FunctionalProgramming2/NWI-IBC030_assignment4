@@ -27,7 +27,7 @@ trees (lists bools 2) 2
 
 --------------------------------------------------------------------------------
 author: Hendrik Werner s4549775
-author: Anna Töskés s1005628
+author: Anna Tökés s1005628
 
 exercise 3.1
 ============
