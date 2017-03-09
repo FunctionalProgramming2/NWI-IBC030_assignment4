@@ -49,3 +49,14 @@ cards r s = (pure Card <*> r <*> s) ++ pure Joker
 
 exercise 3.2
 ============
+
+> lists :: [a] -> Integer -> [[a]]
+> lists _ 0 = []
+> lists as 1 = [[a] | a <- as]
+> lists as i = [a : c | a <- as, c <- lists as (i-1)]
+
+> trees :: [a] -> Integer -> [Tree a]
+> trees _ 0 = []
+> trees as 1 = [Node Empty a Empty | a <- as]
+> trees as i =
+>     concat [[Node Empty a n, Node n a Empty] | a <- as, n <- trees as (i-1)]
