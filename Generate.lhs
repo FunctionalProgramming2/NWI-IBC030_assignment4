@@ -31,5 +31,14 @@ author: Anna Töskés s1005628
 exercise 3.1
 ============
 
+> suits :: [Suit]
+> suits = pure Spades ++ pure Hearts ++ pure Diamonds ++ pure Clubs
+
+> ranks :: [Integer] -> [Rank]
+> ranks is = [Faceless i | i <- is] ++ pure Jack ++ pure Queen ++ pure King
+
+> cards :: [Rank] -> [Suit] -> [Card]
+> cards rs ss = [Card r s | r <- rs, s <- ss] ++ pure Joker
+
 exercise 3.2
 ============
