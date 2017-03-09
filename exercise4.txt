@@ -33,6 +33,21 @@ fmap f (fmap g m)
 exercise 4.2
 ============
 
+(pure f <*> u) <*> pure x
+{2d}
+pure (\g -> g x) <*> (pure f <*> u)
+{2b}
+pure (.) <*> pure (\g -> g x) <*> pure f <*> u
+{2c}
+pure ((.) (\g -> g x)) <*> pure f <*> u
+{2c}
+pure ((\g -> g x) . f) <*> u
+pure (\y -> (\g -> g x) (f y)) <*> u
+pure (\y -> f y x) <*> u
+{2c}
+pure (\a y->f y a) <*> pure x <*> u
+pure (flip f) <*> pure x <*> u
+
 exercise 4.3
 ============
 (optional)
