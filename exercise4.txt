@@ -4,6 +4,32 @@ author: Anna Tökés s1005628
 exercise 4.1
 ============
 
+Assumption: fmap f m = pure f <*> m
+
+1a:
+
+fmap id v
+{assumption}
+pure id <*> v
+
+1b:
+
+fmap (f.g) m
+{assumption}
+pure (f.g) <*> m
+{2c}
+pure ((.) f) <*> pure g <*> m
+{2c}
+pure (.) <*> pure f <*> pure g <*> m
+{2b}
+pure f <*> (pure g <*> m)
+{assumption}
+fmap f (pure g <*> m)
+{assumption}
+fmap f (fmap g m)
+{(.)}
+(fmap f . fmap g) m
+
 exercise 4.2
 ============
 
