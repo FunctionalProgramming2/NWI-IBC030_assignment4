@@ -4,6 +4,10 @@
 > where
 > -- import Unicode
 
+> infixl 6 :+:
+> infixl 7 :*:
+> infixr 1 :?:
+
 > data Expr
 >   =  Lit Integer    -- a literal
 >   |  Expr :+: Expr  -- addition
